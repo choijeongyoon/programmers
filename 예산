@@ -1,0 +1,19 @@
+import java.util.Arrays;
+
+class Solution {
+    public int solution(int[] d, int budget) {
+        int answer = 0;
+        Arrays.sort(d); // 금액 정렬
+        int sum = 0;
+        int i;
+        for(i=0; i<d.length; i++) {
+            sum += d[i];
+            if(sum>budget) // 예산보다 많아지면 break
+                break;
+        }
+        
+        answer = i;
+        
+        return answer;
+    }
+}
